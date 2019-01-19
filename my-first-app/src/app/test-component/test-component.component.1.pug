@@ -1,0 +1,12 @@
+.container
+  .row
+    .col-lg-6()
+      input([(ngModel)]="name")
+    .col-log-6
+      button.btn.btn-primary((click)="getGreetings()") Get Greetings from server!
+  .row
+    .col-lg-6
+      p() {{ greetingsMessage }}
+
+
+
