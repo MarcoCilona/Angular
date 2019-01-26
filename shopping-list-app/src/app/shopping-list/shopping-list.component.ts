@@ -1,11 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import { Ingredients } from '../common/objects.model';
+
+export const ID = 'ShoppingList';
 
 @Component({
-  selector: 'app-shopping-list',
-  templateUrl: './shopping-list.component.html',
-  styleUrls: ['./shopping-list.component.sass']
+  selector: ID,
+  templateUrl: './shopping-list.component.pug',
+  styleUrls: ['./shopping-list.component.scss']
 })
 export class ShoppingListComponent implements OnInit {
+
+  ingredients: Ingredients[] = [];
 
   constructor() { }
 

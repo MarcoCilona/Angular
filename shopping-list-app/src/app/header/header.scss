@@ -1,0 +1,10 @@
+$link-color: black;
+$any-link-color: rgb(0,0,238);
+
+a {
+    color: $link-color
+}
+
+a:-webkit-any-link {
+    color: $any-link-color
+}

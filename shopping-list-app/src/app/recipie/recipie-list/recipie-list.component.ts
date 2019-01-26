@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Identifiers } from '@angular/compiler';
+import { Recipie } from 'src/app/common/objects.model';
 
 export const ID = 'recipieList';
 
@@ -11,6 +11,10 @@ export const ID = 'recipieList';
 export class RecipieListComponent implements OnInit {
 
   public componentName: string = ID;
+
+  recipes: Recipie[] = [
+    new Recipie('Test Recipie', 'Simple a test', '#')
+  ];
 
   constructor() { }
 

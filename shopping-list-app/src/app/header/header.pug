@@ -1,4 +1,23 @@
-.container-fluid
-  .row
-    .col-sm-6.col-sm-offset-3
-      .h2.text-center Shopping List App
+nav.navbar.navbar-default
+  .container-fluid
+    .navbar-header
+      button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='header-navbar', aria-expanded='false')
+        span.sr-only Toggle Navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand(href='#') Recipie Book
+    .collapse.navbar-collapse(id='header-navbar')
+      ul.nav.navbar-nav
+        li
+          a Recipies
+        li
+          a Shopping List
+      ul.nav.navbar-nav.navbar-right
+        li.dropdown
+          a.dropdown-toggle(role='Button') Manage #[span.caret]
+            ul.dropdown-menu
+              li
+                a Save Data
+              li
+                a Fetch Data

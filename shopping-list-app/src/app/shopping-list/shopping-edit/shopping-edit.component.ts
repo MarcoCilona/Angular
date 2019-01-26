@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
+export const ID = 'shoppingListEdit';
+
 @Component({
-  selector: 'app-shopping-edit',
-  templateUrl: './shopping-edit.component.html',
-  styleUrls: ['./shopping-edit.component.sass']
+  selector: ID,
+  templateUrl: './shopping-edit.component.pug',
+  styleUrls: ['./shopping-edit.component.scss']
 })
 export class ShoppingEditComponent implements OnInit {
 

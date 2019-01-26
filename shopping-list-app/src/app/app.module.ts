@@ -1,22 +1,20 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { CommonModule } from './common/commonModule.module';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { ShoppingListComponent } from './shopping-list/shopping-list.component';
-import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { RecipieModule } from './recipie/recipie.module';
+import { ShoppingListModule } from './shopping-list/shopping-list.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    ShoppingListComponent,
-    ShoppingEditComponent
+    HeaderComponent
   ],
   imports: [
-    BrowserModule,
-    RecipieModule
+    CommonModule,
+    RecipieModule,
+    ShoppingListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
