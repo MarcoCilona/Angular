@@ -1,22 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, SimpleChange, Input } from '@angular/core';
 
 @Component({
   selector: 'app-test-component',
-  templateUrl: './test-component.component.1.pug',
-  styleUrls: ['./test-component.component.css']
+  templateUrl: './test-component.component.pug',
+  styleUrls: ['./test-component.component.scss']
 })
 export class TestComponentComponent implements OnInit {
 
   name: string;
-  greetingsMessage :string;
+  greetingsMessage: string;
+  check: boolean;
+  list: string[];
 
   constructor() { }
-  
+
   ngOnInit() {
+    this.check = true;
+    this.list = ['One', 'Two', 'Three'];
   }
 
   getGreetings() {
-    this.greetingsMessage = "Hello " + this.name + "!";
+    this.greetingsMessage = 'Hello ' + this.name + '!';
   }
 
 }

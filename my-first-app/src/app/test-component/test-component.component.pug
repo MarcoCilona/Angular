@@ -1,0 +1,18 @@
+.container()
+  .row
+    .col-lg-6(id="test")
+      input.col-lg-3([(ngModel)]="name")
+      input.col-lg-3(type="checkbox", [(ngModel)] = "check")      
+    .col-log-6
+      button.btn.btn-primary((click)="getGreetings()") Get Greetings from server!
+  .row
+    .col-lg-6
+      p(*ngIf="check; else disabledMessage") {{ greetingsMessage }}
+      ng-template(#disabledMessage) Enable the checkbox to see the message!
+  table.table
+    thead
+      tr
+        th() Test
+    tbody
+      tr(*ngFor="let item of list")
+        td {{ item }}
