@@ -1,0 +1,15 @@
+.row
+    .col-xs-12
+        form
+            .row
+                .col-sm-5.form-group
+                    label(for='name') Name
+                    input.form-control(type='text', id='name')
+                .col-sm-2.form-group
+                    label(for='amount')
+                    input.form-control(type='number', id='amount')
+            .row
+                .col-sm-12
+                    button.btn.btn-success.btn-spacing(type='submit') Add
+                    button.btn.btn-danger.btn-spacing(type='button') Delete
+                    button.btn.btn-primary.btn-spacing(type='button') Clear

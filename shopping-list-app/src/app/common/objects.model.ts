@@ -12,10 +12,14 @@ export class Recipie {
 
 }
 
-export class Ingredients {
-    public name: string;
+export class Ingredient {
 
-    constructor(name: string) {
+    public name: string;
+    public amount: number;
+
+    constructor(name: string, amount: number) {
         this.name = name;
+        this.amount = amount;
     }
+
 }

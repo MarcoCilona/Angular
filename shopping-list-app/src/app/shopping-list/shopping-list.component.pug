@@ -3,4 +3,5 @@
         shoppingListEdit
         hr
         ul.list-group
-            a.list-group-item(style='cursor: pointer')   
+            a.list-group-item(*ngFor='let ingredient of ingredients', style='cursor: pointer')
+                | {{ ingredient.name }} ({{ingredient.amount}})

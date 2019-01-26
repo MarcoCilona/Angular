@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Ingredients } from '../common/objects.model';
+import { Ingredient } from '../common/objects.model';
 
-export const ID = 'ShoppingList';
+export const ID = 'shoppingList';
 
 @Component({
   selector: ID,
@@ -10,7 +10,10 @@ export const ID = 'ShoppingList';
 })
 export class ShoppingListComponent implements OnInit {
 
-  ingredients: Ingredients[] = [];
+  ingredients: Ingredient[] = [
+    new Ingredient('Tomato', 5),
+    new Ingredient('Potato', 3)
+  ];
 
   constructor() { }
 
