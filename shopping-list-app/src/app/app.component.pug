@@ -1,6 +1,6 @@
-header
+header((tabSelected)='onTabChange($event)')
 .container
-    .row
+    .row(*ngIf='showRecipies')
         recipie.center-block
-    .row
+    .row(*ngIf='showShoppingList')
         shoppingList.center-block

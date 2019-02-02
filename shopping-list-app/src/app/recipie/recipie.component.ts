@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Recipie } from '../common/objects.model';
 
 export const ID = 'recipie';
 
@@ -8,5 +9,11 @@ export const ID = 'recipie';
 })
 
 export class RecipieComponent {
+
+    public recipie: Recipie;
+
+    showRecipieDetail(recipie: Recipie) {
+        this.recipie = recipie;
+    }
 
 }

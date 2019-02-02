@@ -1,5 +1,7 @@
-.row
+.row.row-eq-height
     .col-sm-6
-        recipieList
+        recipieList((recipieDetail)='showRecipieDetail($event)')
     .col-sm-6
-        recipieDetail
+        recipieDetail(*ngIf='recipie; else detailInfoMessage', [selectedRecipie]='recipie')
+        ng-template(#detailInfoMessage)
+            .alert.alert-info.align-middle(role='alert')  Select a #[strong recipie] to show its details!

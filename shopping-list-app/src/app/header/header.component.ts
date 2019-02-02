@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 export const ID = 'header';
 
@@ -9,5 +9,11 @@ export const ID = 'header';
 })
 
 export class HeaderComponent {
+
+    @Output() tabSelected: EventEmitter<string> = new EventEmitter<string>();
+
+    onSelect(tab: string) {
+        this.tabSelected.emit(tab);
+    }
 
 }

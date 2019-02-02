@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Recipie } from '../../common/objects.model';
 
 export const ID = 'recipieDetail';
 
@@ -10,6 +11,9 @@ export const ID = 'recipieDetail';
 export class RecipieDetailComponent implements OnInit {
 
   public componentName = ID;
+
+  // tslint:disable-next-line:no-input-rename
+  @Input('selectedRecipie') recipie: Recipie;
 
   constructor() { }
 
