@@ -1,6 +1,6 @@
 .row.row-eq-height
     .col-sm-6
-        recipieList((recipieDetail)='showRecipieDetail($event)')
+        recipieList()
     .col-sm-6
         recipieDetail(*ngIf='recipie; else detailInfoMessage', [selectedRecipie]='recipie')
         ng-template(#detailInfoMessage)

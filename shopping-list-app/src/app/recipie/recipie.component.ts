@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Recipie } from '../common/objects.model';
+import { RecipieService } from './recipie.service';
 
 export const ID = 'recipie';
 
@@ -8,12 +9,17 @@ export const ID = 'recipie';
     templateUrl: './recipie.pug'
 })
 
-export class RecipieComponent {
+export class RecipieComponent implements OnInit {
 
     public recipie: Recipie;
 
-    showRecipieDetail(recipie: Recipie) {
-        this.recipie = recipie;
+    constructor(private recipieService: RecipieService) {
+    }
+
+    ngOnInit() {
+        this.recipieService.selectedRecipie.subscribe((recipie: Recipie) => {
+            this.recipie = recipie;
+        });
     }
 
 }

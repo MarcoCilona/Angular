@@ -5,7 +5,7 @@ import { RecipieComponent } from './recipie.component';
 import { RecipieDetailComponent } from './recipie-detail/recipie-detail.component';
 import { RecipieListComponent } from './recipie-list/recipie-list.component';
 import { RecipieItemComponent } from './recipie-list/recipie-item/recipie-item.component';
-import { BrowserModule } from '@angular/platform-browser';
+import { RecipieService } from './recipie.service';
 
 
 @NgModule({
@@ -20,6 +20,9 @@ import { BrowserModule } from '@angular/platform-browser';
     ],
     imports: [
         CommonModule
+    ],
+    providers: [
+        RecipieService
     ]
 })
 

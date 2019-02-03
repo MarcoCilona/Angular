@@ -4,6 +4,7 @@ import { CommonModule } from '../common/commonModule.module';
 import { ShoppingListComponent } from './shopping-list.component';
 import { ShoppingEditComponent } from './shopping-edit/shopping-edit.component';
 import { BrowserModule } from '@angular/platform-browser';
+import { ShoppingListService } from './shopping-list.service';
 
 
 @NgModule({
@@ -16,6 +17,9 @@ import { BrowserModule } from '@angular/platform-browser';
     ],
     imports: [
         CommonModule
+    ],
+    providers: [
+        ShoppingListService
     ]
 })
 

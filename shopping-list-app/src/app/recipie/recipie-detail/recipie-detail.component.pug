@@ -7,10 +7,22 @@
             button.btn.btn-primary.dropdown-toggle(type='button') Manage Recipe #[span.caret]
             ul.dropdown-menu
                 li
-                    a Add Ingredients to Shopping List
+                    a((click)='onAddIngredientsToShoppingList()') Add Ingredients to Shopping List
                     a Edit Recipie
                     a Delete Recipie
 .row
     .col-xs-12
         | {{ recipie.description }}
+.row
+    .col-xs-12
+        h4 List of necessary ingredients:
+        table.table
+            thead
+                tr
+                    th(scope='col') Ingredient
+                    th(scope='col') Amount
+            tbody
+                tr(*ngFor='let ingredient of recipie.ingredients')
+                    td {{ ingredient.name }}
+                    td {{ ingredient.amount }}
         

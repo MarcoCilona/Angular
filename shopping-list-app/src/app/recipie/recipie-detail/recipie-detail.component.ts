@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Recipie } from '../../common/objects.model';
+import { Recipie, Ingredient } from '../../common/objects.model';
+import { RecipieService } from '../recipie.service';
 
 export const ID = 'recipieDetail';
 
@@ -15,9 +16,13 @@ export class RecipieDetailComponent implements OnInit {
   // tslint:disable-next-line:no-input-rename
   @Input('selectedRecipie') recipie: Recipie;
 
-  constructor() { }
+  constructor(private recipieService: RecipieService) { }
 
   ngOnInit() {
+  }
+
+  onAddIngredientsToShoppingList() {
+    this.recipieService.addIngredientsToShoppingList(this.recipie.ingredients);
   }
 
 }
