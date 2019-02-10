@@ -1,4 +1,6 @@
-a.list-group-item.clearfix
+a.list-group-item.clearfix(role='button',
+                           [routerLink]="[recipie.id, 'recipie']",
+                           routerLinkActive='active')
     .pull-left
         h4.list-group-item-heading {{ recipie.name }}
         p.list-group-item-text {{ recipie.description }}

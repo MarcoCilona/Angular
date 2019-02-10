@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { DropDownDirective } from './drop-down.directive';
+import { AppRoutingModule } from '../app-routing.module';
 
 @NgModule({
     declarations: [
@@ -9,12 +10,14 @@ import { DropDownDirective } from './drop-down.directive';
     ],
     imports: [
         BrowserModule,
-        FormsModule
+        FormsModule,
+        AppRoutingModule
     ],
     exports: [
         BrowserModule,
         FormsModule,
-        DropDownDirective
+        DropDownDirective,
+        AppRoutingModule
     ]
 })
 

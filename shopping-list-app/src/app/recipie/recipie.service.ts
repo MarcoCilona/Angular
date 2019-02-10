@@ -1,6 +1,7 @@
 import { Recipie, Ingredient } from '../common/objects.model';
 import { EventEmitter, Injectable } from '@angular/core';
 import { ShoppingListService } from '../shopping-list/shopping-list.service';
+import * as _ from 'lodash';
 
 @Injectable()
 export class RecipieService {
@@ -13,6 +14,10 @@ export class RecipieService {
     ];
 
     selectedRecipie: EventEmitter<Recipie> = new EventEmitter<Recipie>();
+
+    getRecipie (id: number) {
+        return _.find(this.recipes, {id});
+    }
 
     getRecipies () {
         return this.recipes.slice();

@@ -21,8 +21,4 @@ export class RecipieListComponent implements OnInit {
     this.recipies = this.recipieService.getRecipies();
   }
 
-  selectRecipie(recipie: Recipie) {
-    this.recipieService.selectedRecipie.emit(recipie);
-  }
-
 }

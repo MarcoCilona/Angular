@@ -12,8 +12,6 @@ export class RecipieItemComponent implements OnInit {
 
   @Input() recipie: Recipie;
 
-  public n: Recipie;
-
   constructor() { }
 
   ngOnInit() {}

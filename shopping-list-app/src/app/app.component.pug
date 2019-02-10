@@ -1,6 +1,5 @@
-header((tabSelected)='onTabChange($event)')
+header
 .container
-    .row(*ngIf='showRecipies')
-        recipie.center-block
-    .row(*ngIf='showShoppingList')
-        shoppingList.center-block
+    .row
+        .col-xs-12
+            router-outlet

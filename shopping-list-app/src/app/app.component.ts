@@ -17,18 +17,4 @@ export class AppComponent implements OnInit {
     this.showShoppingList = false;
   }
 
-  onTabChange(tabSelected: string) {
-
-    switch (tabSelected) {
-      case 'recipies':
-        this.showRecipies = true;
-        this.showShoppingList = false;
-        break;
-      case 'shoppingList':
-        this.showRecipies = false;
-        this.showShoppingList = true;
-        break;
-    }
-  }
-
 }

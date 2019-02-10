@@ -1,6 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Recipie, Ingredient } from '../../common/objects.model';
+import { Component, OnInit } from '@angular/core';
+import { Recipie } from '../../common/objects.model';
 import { RecipieService } from '../recipie.service';
+import { ActivatedRoute, Params } from '@angular/router';
 
 export const ID = 'recipieDetail';
 
@@ -13,12 +14,19 @@ export class RecipieDetailComponent implements OnInit {
 
   public componentName = ID;
 
-  // tslint:disable-next-line:no-input-rename
-  @Input('selectedRecipie') recipie: Recipie;
+  public recipie: Recipie;
+  private recipieId: number;
 
-  constructor(private recipieService: RecipieService) { }
+  constructor(private recipieService: RecipieService,
+              private route: ActivatedRoute) { }
 
   ngOnInit() {
+
+    this.route.params.subscribe((params: Params) => {
+      this.recipieId = +params['id'];
+      this.recipie = this.recipieService.getRecipie(this.recipieId);
+    });
+
   }
 
   onAddIngredientsToShoppingList() {

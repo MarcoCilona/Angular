@@ -9,13 +9,13 @@ nav.navbar.navbar-default
       a.navbar-brand(href='#') Recipie Book
     .collapse.navbar-collapse(id='header-navbar')
       ul.nav.navbar-nav
-        li
-          a(href='#', (click)='onSelect("recipies")') Recipies
-        li
-          a(href='#', (click)='onSelect("shoppingList")') Shopping List
+        li(routerLinkActive='active')
+          a(routerLink='/recipies') Recipies
+        li(routerLinkActive='active')
+          a(routerLink='/shopping-list') Shopping List
       ul.nav.navbar-nav.navbar-right
         li.dropdown
-          a.dropdown-toggle(role='Button') Manage #[span.caret]
+          a.dropdown-toggle(role='button', appDropDown) Manage #[span.caret]
             ul.dropdown-menu
               li
                 a Save Data
