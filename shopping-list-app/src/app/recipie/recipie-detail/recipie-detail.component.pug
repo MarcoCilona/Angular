@@ -7,9 +7,9 @@
             button.btn.btn-primary.dropdown-toggle(type='button') Manage Recipe #[span.caret]
             ul.dropdown-menu
                 li
-                    a((click)='onAddIngredientsToShoppingList()') Add Ingredients to Shopping List
-                    a Edit Recipie
-                    a Delete Recipie
+                    a(role='button', (click)='onAddIngredientsToShoppingList()') Add Ingredients to Shopping List
+                    a(role='button') Edit Recipie
+                    a(role='button') Delete Recipie
 .row
     .col-xs-12
         | {{ recipie.description }}

@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+$paddingDirections: ('top', 'right', 'bottom', 'left');
+
 .no-margin-top
   margin-top: 0px
 
@@ -9,4 +11,24 @@
 
 .alert
   margin: 0
+
+@each $direction in $paddingDirections
+  /* Setting margin */
+  .margin-xs-#{$direction}
+    margin-#{$direction}: 5px
+  .margin-sm-#{$direction}
+    margin-#{$direction}: 10px
+  .margin-md-#{$direction}
+    margin-#{$direction}: 15px
+  .margin-lg-#{$direction}
+    margin-#{$direction}: 20px
+  /* Setting padding */
+  .padding-xs-#{$direction}
+    padding-#{$direction}: 5px
+  .padding-sm-#{$direction}
+    padding-#{$direction}: 10px
+  .padding-md-#{$direction}
+    padding-#{$direction}: 15px
+  .padding-lg-#{$direction}
+    padding-#{$direction}: 20px
 
