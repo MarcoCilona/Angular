@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Recipie } from '../../common/objects.model';
 import { RecipieService } from '../recipie.service';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 export const ID = 'recipieDetail';
 
@@ -18,7 +18,8 @@ export class RecipieDetailComponent implements OnInit {
   private recipieId: number;
 
   constructor(private recipieService: RecipieService,
-              private route: ActivatedRoute) { }
+              private route: ActivatedRoute,
+              private router: Router) { }
 
   ngOnInit() {
 
@@ -26,6 +27,10 @@ export class RecipieDetailComponent implements OnInit {
       this.recipieId = +params['id'];
       this.recipie = this.recipieService.getRecipie(this.recipieId);
     });
+
+    if (this.recipie === undefined) {
+      this.router.navigate([''], {relativeTo: this.route});
+    }
 
   }
 

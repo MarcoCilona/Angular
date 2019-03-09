@@ -3,7 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { RecipieComponent } from './recipie/recipie.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { RecipieDetailComponent } from './recipie/recipie-detail/recipie-detail.component';
-import { DefaultDefaultRecipieDetailComponent } from './recipie/recipie-detail/default/default.component';
+import { DefaultRecipieDetailComponent } from './recipie/recipie-detail/default/default.component';
+import { RecipieEditComponent } from './recipie/recipie-edit/recipie-edit.component';
 
 const routes: Routes = [
   {
@@ -17,7 +18,15 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: DefaultDefaultRecipieDetailComponent
+        component: DefaultRecipieDetailComponent
+      },
+      {
+        path: 'new',
+        component: RecipieComponent
+      },
+      {
+        path: ':id/edit',
+        component: RecipieEditComponent
       },
       {
         path: ':id/recipie',

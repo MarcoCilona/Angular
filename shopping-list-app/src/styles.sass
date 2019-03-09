@@ -1,6 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+
+$directions: ['top', 'right', 'bottom', 'left'];
+$dimensions: (xs: 2px, sm: 5px, md: 10px, lg: 15px);
+
 .no-margin-top
-  margin-top: 0px
+  margin-top: 0
 
 .row-eq-height
   align-items: center
@@ -8,5 +12,16 @@
   flex-wrap: wrap;
 
 .alert
-  margin: 0
+  margin: 0;
 
+// Dynamically create margin classes
+@each $label, $value in $dimensions
+  @each $direction in $directions
+    .margin-#{$label}-#{$direction}
+      margin-#{$direction}: $value;
+
+// Dynamically create padding classes
+@each $label, $value in $dimensions
+  @each $direction in $directions
+    .padding-#{$label}-#{$direction}
+      padding-#{$direction}: $value;

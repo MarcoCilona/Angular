@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './defualt.pug'
+    templateUrl: './default.pug'
 })
 
-export class DefaultDefaultRecipieDetailComponent {
+export class DefaultRecipieDetailComponent {
 
 }

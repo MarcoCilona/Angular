@@ -6,7 +6,8 @@ import { RecipieDetailComponent } from './recipie-detail/recipie-detail.componen
 import { RecipieListComponent } from './recipie-list/recipie-list.component';
 import { RecipieItemComponent } from './recipie-list/recipie-item/recipie-item.component';
 import { RecipieService } from './recipie.service';
-import { DefaultDefaultRecipieDetailComponent } from './recipie-detail/default/default.component';
+import { DefaultRecipieDetailComponent } from './recipie-detail/default/default.component';
+import { RecipieEditComponent } from './recipie-edit/recipie-edit.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { DefaultDefaultRecipieDetailComponent } from './recipie-detail/default/d
         RecipieDetailComponent,
         RecipieListComponent,
         RecipieItemComponent,
-        DefaultDefaultRecipieDetailComponent
+        DefaultRecipieDetailComponent,
+        RecipieEditComponent
     ],
     exports: [
         RecipieComponent
